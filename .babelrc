@@ -26,7 +26,16 @@
           ".json"
         ],
         "alias": {
-          "@src": "./src"
+          "@src": "./src",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@context": "./src/context",
+          "@forms": "./src/forms",
+          "@pages": "./src/pages",
+          "@router": "./src/router",
+          "@services": "./src/services",
+          "@store": "./src/store",
+          "@utils": "./src/utils"
         }
       }
     ]

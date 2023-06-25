@@ -39,11 +39,17 @@
       },
       "babel-module": {
         "alias": {
+          "@src/*": [
+            "./src/*"
+          ],
           "@assets/*": [
             "./src/assets/*"
           ],
           "@components/*": [
             "./src/components/*"
+          ],
+          "@context/*": [
+            "./src/context/*"
           ],
           "@forms/*": [
             "./src/forms/*"
@@ -51,17 +57,14 @@
           "@pages/*": [
             "./src/pages/*"
           ],
-          "@redux/*": [
-            "./src/redux/*"
-          ],
-          "@router/*": [
+           "@router/*": [
             "./src/router/*"
           ],
           "@services/*": [
             "./src/services/*"
           ],
-          "@styles/*": [
-            "./src/styles/*"
+          "@store/*": [
+            "./src/store/*"
           ],
           "@utils/*": [
             "./src/utils/*"

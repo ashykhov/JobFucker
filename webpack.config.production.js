@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { outputConfig, copyPluginPatterns, scssConfig, entryConfig, terserPluginConfig } = require("./env.config");
+const { outputConfig, copyPluginPatterns, scssConfig, entryConfig, terserPluginConfig, alias } = require("./env.config");
 
 module.exports = (env, options) => {
     return {
@@ -60,7 +60,7 @@ module.exports = (env, options) => {
                 },
             ],
         },
-        resolve: { extensions: [".tsx", ".ts", ".js"] },
+        resolve: { extensions: [".tsx", ".ts", ".js"], alias },
         output: {
             filename: "js/[name].bundle.js",
             path: path.resolve(__dirname, outputConfig.destPath),

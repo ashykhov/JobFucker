@@ -53,9 +53,23 @@ const terserPluginConfig = {
     }
 };
 
+const alias = {
+    '@src': path.resolve(__dirname, 'src'),
+    "@assets": path.resolve(__dirname, 'src', 'assets'),
+    "@components": path.resolve(__dirname, 'src', 'components'),
+    "@context": path.resolve(__dirname, 'src', 'context'),
+    "@forms": path.resolve(__dirname, 'src', 'forms'),
+    "@pages": path.resolve(__dirname, 'src', 'pages'),
+    "@router": path.resolve(__dirname, 'src', 'router'),
+    "@services": path.resolve(__dirname, 'src', 'services'),
+    "@store": path.resolve(__dirname, 'src', 'store'),
+    "@utils": path.resolve(__dirname, 'src', 'utils')
+}
+
 module.exports.copyPluginPatterns = copyPluginPatterns;
 module.exports.entryConfig = entryConfig;
 module.exports.scssConfig = scssConfig;
 module.exports.devServer = devServer;
 module.exports.terserPluginConfig = terserPluginConfig;
 module.exports.outputConfig = outputConfig;
+module.exports.alias = alias;

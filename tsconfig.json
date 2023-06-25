@@ -30,15 +30,16 @@
     "paths": {
       /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
       "*": ["./*"],
+      "@src/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
+      "@context/*": ["./src/context/*"],
       "@forms/*": ["./src/forms/*"],
       "@pages/*": ["./src/pages/*"],
-      "@redux/*": ["./src/redux/*"],
       "@router/*": ["./src/router/*"],
       "@services/*": ["./src/services/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@store/*": ["./src/store/*"],
+      "@utils/*": ["./src/utils/*"],
     },
     "allowSyntheticDefaultImports": true,
     /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
@@ -49,7 +50,7 @@
   },
   "include": [
     "src"
-   ],
+, "public/moon.svg"   ],
   "exclude": [
     "node_modules"
   ]

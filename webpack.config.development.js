@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { outputConfig, copyPluginPatterns, entryConfig, devServer } = require("./env.config");
+const { outputConfig, copyPluginPatterns, entryConfig, devServer, alias } = require("./env.config");
 
 module.exports = (env, options) => {
     return {
@@ -64,7 +64,7 @@ module.exports = (env, options) => {
                 },
             ],
         },
-        resolve: { extensions: [".tsx", ".ts", ".js"] },
+        resolve: { extensions: [".tsx", ".ts", ".js"], alias },
         output: {
             filename: "js/[name].bundle.js",
             path: path.resolve(__dirname, outputConfig.destPath),
