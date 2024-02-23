@@ -27,7 +27,6 @@
         ],
         "alias": {
           "@src": "./src",
-          "@assets": "./src/assets",
           "@components": "./src/components",
           "@context": "./src/context",
           "@forms": "./src/forms",

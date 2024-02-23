@@ -35,29 +35,6 @@ module.exports = (env, options) => {
                         "sass-loader"
                     ],
                 },
-                {
-                    test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-                    type: "javascript/auto",
-                    loader: "file-loader",
-                    options: {
-                        publicPath: "../",
-                        name: "[path][name].[ext]",
-                        context: path.resolve(__dirname, "src/assets"),
-                        emitFile: false,
-                    },
-                },
-                {
-                    test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-                    type: "javascript/auto",
-                    exclude: /images/,
-                    loader: "file-loader",
-                    options: {
-                        publicPath: "../",
-                        context: path.resolve(__dirname, "src/assets"),
-                        name: "[path][name].[ext]",
-                        emitFile: false,
-                    },
-                },
             ],
         },
         resolve: { extensions: [".tsx", ".ts", ".js"], alias },
@@ -76,7 +53,6 @@ module.exports = (env, options) => {
         },
         plugins: [
             new CleanWebpackPlugin(),
-            new CopyPlugin(copyPluginPatterns),
             new MiniCssExtractPlugin({ filename: scssConfig.destFileName }),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",

@@ -8,19 +8,19 @@ const outputConfig = {
 // https://webpack.js.org/concepts/entry-points/ 
 const entryConfig = [
     "./src/App.ts",
-    "./src/assets/stylesheets/app.scss",
+    "./src/styles/app.scss",
 ];
 
 
-// Copy files from src to dist
-// https://webpack.js.org/plugins/copy-webpack-plugin/
-const copyPluginPatterns = {
-    patterns: [
-        { from: "./src/assets/images", to: "images" },
-        { from: "./src/assets/fonts", to: "fonts" },
-        { from: "./src/assets/vendor", to: "js" },
-    ]
-};
+// // Copy files from src to dist
+// // https://webpack.js.org/plugins/copy-webpack-plugin/
+// const copyPluginPatterns = {
+//     patterns: [
+//         { from: "./src/assets/images", to: "images" },
+//         { from: "./src/assets/fonts", to: "fonts" },
+//         { from: "./src/assets/vendor", to: "js" },
+//     ]
+// };
 
 
 // Dev server setup
@@ -55,7 +55,6 @@ const terserPluginConfig = {
 
 const alias = {
     '@src': path.resolve(__dirname, 'src'),
-    "@assets": path.resolve(__dirname, 'src', 'assets'),
     "@components": path.resolve(__dirname, 'src', 'components'),
     "@context": path.resolve(__dirname, 'src', 'context'),
     "@forms": path.resolve(__dirname, 'src', 'forms'),
@@ -66,7 +65,6 @@ const alias = {
     "@utils": path.resolve(__dirname, 'src', 'utils')
 }
 
-module.exports.copyPluginPatterns = copyPluginPatterns;
 module.exports.entryConfig = entryConfig;
 module.exports.scssConfig = scssConfig;
 module.exports.devServer = devServer;

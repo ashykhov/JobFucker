@@ -1,18 +1,18 @@
 import React from 'react';
 
+import Layout from '@components/Layout';
+
 import { App } from './App';
-import { Hello } from './components/Hello';
+
+import { Popup } from '@components/Popup';
+
 
 export interface MainProps {
   app: App;
 }
 
 export const Main: React.FC<MainProps> = () => (
-  <Hello message="React TypeScript Webpack Starter">
-    <div className="features">
-      <div>Webpack 5 + HMR</div>
-      <div>TypeScript + React</div>
-      <div>SCSS + Autoprefixing</div>
-    </div>
-  </Hello>
+  <Layout>
+    <Popup />
+  </Layout>
 );

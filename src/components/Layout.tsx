@@ -12,7 +12,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => (
   <ThemeConsumer>
     {({ theme }) => (
       <div className={classNames('layout', theme)} data-testid="layout">
-        <Header />
+        {/* <Header /> */}
         {children}
       </div>
     )}

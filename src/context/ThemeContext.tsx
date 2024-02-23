@@ -1,18 +1,17 @@
 import React from 'react';
-import { TTheme } from '@utils/interfaces';
 
 type ThemeContextType = {
   /**
    * 'dark' | 'light'.
    */
-  theme: TTheme;
+  theme: 'dark' | 'light';
   /**
    * theme updating handler
    */
   updateTheme?: () => void;
 };
 
-const defaultState: { theme: TTheme } = {
+const defaultState: { theme: 'dark' | 'light' } = {
   theme: 'dark'
 };
 
