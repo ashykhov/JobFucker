@@ -48,10 +48,10 @@ module.exports = (env, options) => {
             publicPath: "",
         },
         plugins: [
-            new HtmlWebpackPlugin({
-                template: "./src/index.html",
-                inject: true,
-                minify: false
+
+            new CopyPlugin({
+                patterns: [{ from: ".", to: "../", context: "public" }],
+                options: {},
             }),
         ]
     };

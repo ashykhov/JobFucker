@@ -4,12 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { outputConfig, copyPluginPatterns, scssConfig, entryConfig, terserPluginConfig, alias } = require("./env.config");
+const { outputConfig, scssConfig, entryConfig, terserPluginConfig, alias } = require("./env.config");
 
 module.exports = (env, options) => {
     return {
         mode: options.mode,
-        entry: entryConfig,
+        entry: {
+            main: entryConfig,
+            background: path.join(__dirname, 'src', 'utils', 'background.ts'),
+            content_script: path.join(__dirname, 'src', 'utils', 'content_script.tsx'),
+        },
         module: {
             rules: [
                 {
@@ -58,6 +62,10 @@ module.exports = (env, options) => {
                 template: "./src/index.html",
                 inject: true,
                 minify: false
+            }),
+            new CopyPlugin({
+                patterns: [{ from: "./public", to: "." }],
+                options: {},
             }),
         ]
     };

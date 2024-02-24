@@ -8,6 +8,8 @@ const outputConfig = {
 // https://webpack.js.org/concepts/entry-points/ 
 const entryConfig = [
     "./src/App.ts",
+    "./src/utils/background.ts",
+    "./src/utils/content_script.tsx",
     "./src/styles/app.scss",
 ];
 
