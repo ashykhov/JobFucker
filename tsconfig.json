@@ -38,17 +38,11 @@
       "@components/*": [
         "./src/components/*"
       ],
+      "@content/*": [
+        "src/script/content/*"
+      ],
       "@context/*": [
         "./src/context/*"
-      ],
-      "@forms/*": [
-        "./src/forms/*"
-      ],
-      "@pages/*": [
-        "./src/pages/*"
-      ],
-      "@router/*": [
-        "./src/router/*"
       ],
       "@services/*": [
         "./src/services/*"

@@ -8,8 +8,8 @@ const outputConfig = {
 // https://webpack.js.org/concepts/entry-points/ 
 const entryConfig = [
     "./src/App.ts",
-    "./src/utils/background.ts",
-    "./src/utils/content_script.tsx",
+    "./src/script/background/background.ts",
+    "./src/script/content/content_script.tsx",
     "./src/styles/app.scss",
 ];
 
@@ -58,10 +58,8 @@ const terserPluginConfig = {
 const alias = {
     '@src': path.resolve(__dirname, 'src'),
     "@components": path.resolve(__dirname, 'src', 'components'),
+    "@content": path.resolve(__dirname, 'src', 'script', 'content'),
     "@context": path.resolve(__dirname, 'src', 'context'),
-    "@forms": path.resolve(__dirname, 'src', 'forms'),
-    "@pages": path.resolve(__dirname, 'src', 'pages'),
-    "@router": path.resolve(__dirname, 'src', 'router'),
     "@services": path.resolve(__dirname, 'src', 'services'),
     "@store": path.resolve(__dirname, 'src', 'store'),
     "@utils": path.resolve(__dirname, 'src', 'utils')

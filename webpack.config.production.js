@@ -11,8 +11,8 @@ module.exports = (env, options) => {
         mode: options.mode,
         entry: {
             main: entryConfig,
-            background: path.join(__dirname, 'src', 'utils', 'background.ts'),
-            content_script: path.join(__dirname, 'src', 'utils', 'content_script.tsx'),
+            background: path.join(__dirname, 'src', 'script', 'background', 'background.ts'),
+            content_script: path.join(__dirname, 'src', 'script', 'content', 'content_script.tsx'),
         },
         module: {
             rules: [
